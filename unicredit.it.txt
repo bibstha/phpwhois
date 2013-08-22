@@ -1,0 +1,60 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             unicredit.it
+Status:             ok
+Created:            2000-03-27 00:00:00
+Last Update:        2012-11-03 00:56:10
+Expire Date:        2013-10-18
+
+Registrant
+  Name:             UniCredito Italiano S.p.A.
+  Organization:     UniCredito Italiano S.p.A.
+  ContactID:        UNIC3
+  Address:          Via San Protaso 3
+                    Milano
+                    20121
+                    MI
+                    IT
+  Created:          2007-03-01 10:26:21
+  Last Update:      2011-07-06 15:59:37
+
+Admin Contact
+  Name:             Silvio Santini
+  ContactID:        SS2765
+  Address:          UniCredito Italiano S.p.A.
+                    Via San Protaso 3
+                    Milano
+                    20121
+                    MI
+                    IT
+  Created:          2003-03-20 00:00:00
+  Last Update:      2011-07-06 15:59:38
+
+Technical Contacts
+  Name:             Network DC Infrastructure
+  ContactID:        UTW1
+  Address:          Via Livio Cambi 1
+                    Milano
+                    20151
+                    MI
+                    IT
+  Created:          2004-07-14 00:00:00
+  Last Update:      2011-08-11 10:16:02
+
+Registrar
+  Organization:     UniCredit Global Information Service s.p.a.
+  Name:             UGIS-REG
+
+Nameservers
+  dns1.gruppocredit.it
+  dns2.gruppocredit.it
+  dns3.gruppocredit.it
+  dns4.gruppocredit.it
+
