@@ -1,0 +1,42 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             prada.it
+Status:             ok
+Created:            1997-06-12 00:00:00
+Last Update:        2013-05-13 00:58:30
+Expire Date:        2014-04-27
+
+Registrant
+  Name:             Prada S.A.
+  Organization:     Prada S.A.
+  ContactID:        NEXIT00000000413
+
+Admin Contact
+  Name:             Prada S.A.
+  Organization:     Prada S.A.
+  ContactID:        NEXIT00000000413
+
+Technical Contacts
+  Name:             Prada S.A.
+  Organization:     Prada S.A.
+  ContactID:        NEXIT00000000413
+
+Registrar
+  Organization:     Nexin Technologies S.p.A.
+  Name:             NEXIN-REG
+  Web:              http://www.nexin.it
+
+Nameservers
+  ns1.barbero.co.uk
+  ns2.barbero.co.uk
+  ns3.barbero.co.uk
+  ns4.barbero.co.uk
+  ns5.barbero.co.uk
+

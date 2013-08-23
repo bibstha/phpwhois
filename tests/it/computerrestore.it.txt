@@ -1,0 +1,59 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             computerrestore.it
+Status:             ok
+Created:            2005-07-06 00:00:00
+Last Update:        2013-07-22 00:37:09
+Expire Date:        2014-07-06
+
+Registrant
+  Name:             Computer Restore Snc
+  Organization:     Computer Restore Snc
+  ContactID:        COMP969
+  Address:          strada per le tre cime 30
+                    Sopramonte
+                    38070
+                    TN
+                    IT
+  Created:          2007-03-01 10:42:14
+  Last Update:      2011-01-18 11:22:35
+
+Admin Contact
+  Name:             Franceschini Christian
+  Organization:     Christian Franceschini
+  ContactID:        FC115844
+  Address:          strada per le tre cime 30
+                    sopramonte
+                    38070
+                    TN
+                    IT
+  Created:          2010-11-30 02:07:11
+  Last Update:      2011-01-18 11:22:35
+
+Technical Contacts
+  Name:             Technical Support
+  Organization:     Register.it S.p.A.
+  ContactID:        2409-REGT
+  Address:          Via Zanchi 22
+                    Bergamo
+                    24126
+                    BG
+                    IT
+  Created:          2009-09-28 11:01:09
+  Last Update:      2012-04-27 15:13:45
+
+Registrar
+  Organization:     Register.it s.p.a.
+  Name:             REGISTER-REG
+
+Nameservers
+  ns1.register.it
+  ns2.register.it
+

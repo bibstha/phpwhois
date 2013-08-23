@@ -1,0 +1,59 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             superpoli.it
+Status:             ok
+Created:            2000-01-27 00:00:00
+Last Update:        2013-05-05 00:54:28
+Expire Date:        2014-04-19
+
+Registrant
+  Name:             Supermercati Poli S.R.L.
+  Organization:     Supermercati Poli S.R.L.
+  ContactID:        SUPE436
+  Address:          Via Luigi de Campi 8
+                    Trento
+                    38100
+                    TN
+                    IT
+  Created:          2007-03-01 11:06:39
+  Last Update:      2011-06-07 16:15:57
+
+Admin Contact
+  Name:             Paolo Poli
+  ContactID:        PP3656
+  Address:          Via Luigi de Campi 8
+                    Trento
+                    38100
+                    TN
+                    IT
+  Created:          2004-04-19 00:00:00
+  Last Update:      2011-06-07 16:16:08
+
+Technical Contacts
+  Name:             Domain Name Service
+  ContactID:        DNS8
+  Address:          DNS & Domain Center
+                    via Fersina, 23
+                    Trento
+                    38100
+                    TN
+                    IT
+  Created:          2005-05-24 00:00:00
+  Last Update:      2011-06-07 16:16:12
+
+Registrar
+  Organization:     MC-link s.p.a
+  Name:             MCLINK-REG
+  Web:              http://www.mclink.it
+
+Nameservers
+  dns3.aknet.it
+  dns4.aknet.it
+

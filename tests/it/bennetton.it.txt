@@ -1,0 +1,39 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             bennetton.it
+Status:             ok
+Created:            2012-11-05 21:59:01
+Last Update:        2013-02-27 15:15:29
+Expire Date:        2013-11-05
+
+Registrant
+  Name:             New Sugar Management Ltd
+  Organization:     New Sugar Management Ltd
+  ContactID:        VUPP-NS
+
+Admin Contact
+  Name:             New Sugar Management Ltd
+  Organization:     New Sugar Management Ltd
+  ContactID:        VUPP-NS
+
+Technical Contacts
+  Name:             New Sugar Management Ltd
+  Organization:     New Sugar Management Ltd
+  ContactID:        VUPP-NS
+
+Registrar
+  Organization:     Vupp.com Werbegesellschaft m.b.H.
+  Name:             VUPP-COM-REG
+  Web:              http://www.vupp.com
+
+Nameservers
+  ns1.redirectdom.com
+  ns2.redirectdom.com
+

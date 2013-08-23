@@ -1,0 +1,56 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             ferrari.it
+Status:             ok
+Created:            1996-01-29 00:00:00
+Last Update:        2013-05-01 00:59:04
+Expire Date:        2014-04-15
+
+Registrant
+  Name:             Ferrari Spa
+  Organization:     Ferrari Spa
+  ContactID:        DUP737139344
+  Address:          Via Abetone Inferiore 4
+                    Maranello
+                    41053
+                    MO
+                    IT
+  Created:          2013-01-23 14:40:42
+  Last Update:      2013-01-23 14:40:42
+
+Admin Contact
+  Name:             Pietro Guglielmi
+  Organization:     Ferrari S.p.A.
+  ContactID:        DUP787048260
+
+Technical Contacts
+  Name:             BARBERO & Associates Ltd
+  ContactID:        DUP789382755
+  Address:          18 Cornwall Gardens Apt 5
+                    London
+                    SW7 4AW
+                    UK
+                    GB
+  Created:          2013-01-23 14:40:40
+  Last Update:      2013-01-23 14:40:40
+
+Registrar
+  Organization:     Nexin Technologies S.p.A.
+  Name:             NEXIN-REG
+  Web:              http://www.nexin.it
+
+Nameservers
+  ns1.ferrari.it
+  ns2.ferrari.it
+  ns3.ferrari.it
+  ns1.atlanet.it
+  ns1.vaips.it
+  ns2.vaips.it
+
