@@ -22,10 +22,25 @@ class PhpwhoisToWhoapi {
 
   function mapPhpwhoisToWhoapi($phpwhoFormat) {
     $ret = [];
-    if ("yes" == $phpwhoFormat['regrinfo']) {
+    switch ($phpwhoFormat['regrinfo']) {
+      case "no":
+      break;
+
+      case "yes":
       $ret["status"] = "success";
-      $ret["status_desc"] = "Request successful",
-      $ret["whois_server"] = $this->server
+      $ret["status_desc"] = "Request successful";
+      $ret["whois_server"] = $this->whoisServer;
+      $ret["limit_hit"] = false;
+      $ret["registered"] = true;
+      $ret["premium"] = false;
+      $ret["domain_status"]
+      break;
+
+
+      default:
+    }
+    
+      
     }
   }
 }
