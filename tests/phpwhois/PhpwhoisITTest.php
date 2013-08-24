@@ -1,6 +1,4 @@
 <?php
-require_once('whois.main.php');
-
 class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
 
   function _getDate($format, $dateStr) {
@@ -13,7 +11,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
   }
 
   function testItalianStrToPhpwhois() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
 
     // Test Google
     $sampleFile = file_get_contents(TEST_ROOT . "/it/amazon.it.txt");
@@ -45,7 +43,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
   }
 
   function testWhoapiHasEmails() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
 
     // Test Google Italian
     $sampleFile = file_get_contents(TEST_ROOT . "/it/amazon.it.txt");
@@ -62,7 +60,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
   }
 
   function testPhpwhoisToWhoapi() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     
     // Check for Italian Parser
     $phpwhoarray = file_get_contents(TEST_ROOT . "/it/amazon.it.txt");
@@ -148,7 +146,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
   }
 
   function testNotFoundDomain() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     $raw = file_get_contents("it/notfound.txt");
     $whois = new PhpwhoisToWhoapi("it", "www.nic.it");
     $result = $whois->convertToWhoapi($raw);
@@ -168,7 +166,7 @@ Status:             AVAILABLE
   }
 
   function testLimitHit() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     $raw = file_get_contents("it/limit.txt");
     $whois = new PhpwhoisToWhoapi("it", "www.nic.it");
     $result = $whois->convertToWhoapi($raw);

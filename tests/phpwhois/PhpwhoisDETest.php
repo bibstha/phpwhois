@@ -1,6 +1,4 @@
 <?php
-require_once('whois.main.php');
-
 class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
   function testIncludePath() {
     $includePath = get_include_path();
@@ -8,7 +6,7 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
   }
 
   function testGermanStrToPhpwhois() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
 
     // Test Google
     $sampleFile = file_get_contents(TEST_ROOT . "/de/google.de.txt");
@@ -38,7 +36,7 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
   }
 
   function testWhoapiHasEmails() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
 
     // Test Google German
     $sampleFile = file_get_contents(TEST_ROOT . "/de/google.de.txt");
@@ -57,7 +55,7 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
   }
 
   function testPhpwhoisToWhoapi() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     
     // Check for German Parser
     $phpwhoarray = file_get_contents(TEST_ROOT . "/de/google.de.txt");
@@ -125,7 +123,7 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
   }
 
   function testNotFoundDomain() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     $raw = file_get_contents("de/notfound.txt");
     $whois = new PhpwhoisToWhoapi("de", "whois.denic.de");
     $result = $whois->convertToWhoapi($raw);
@@ -145,7 +143,7 @@ Status: free
   }
 
   function testLimitHit() {
-    require_once('phpwhois2whoapi.php');
+    require_once('phpwhois.to.whoapi.php');
     $raw = file_get_contents("de/limit.txt");
     $whois = new PhpwhoisToWhoapi("de", "whois.denic.de");
     $result = $whois->convertToWhoapi($raw);

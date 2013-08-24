@@ -71,10 +71,11 @@ class Whois extends WhoisClient
     $this->WHOIS_SPECIAL[$tld] = $server;
   }
   
+  
+
   /*
    *  Lookup query
    */
-  
   function Lookup($query = '', $is_utf = true)
   {
     // start clean

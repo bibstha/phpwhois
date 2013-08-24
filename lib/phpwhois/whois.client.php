@@ -80,6 +80,10 @@ class WhoisClient {
 	 * Perform lookup
 	 */
 
+	/**
+	 * Determins which whois server to query
+	 * and the parameters required for the servers
+	 */
 	function GetRawData ($query) {
 		
 		$this->Query['query'] = $query;
