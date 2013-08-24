@@ -23,7 +23,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- */
+*/
 
 /*
 BUG
@@ -32,47 +32,70 @@ BUG
 */
 
 if (!defined('__IT_HANDLER__'))
-	define('__IT_HANDLER__', 1);
+  define('__IT_HANDLER__', 1);
 
 require_once('whois.parser.php');
 
 class it_handler
-	{
-	function parse($data_str, $query)
-		{
-		$items = array(
-			'domain.name' =>	'Domain:',
-			'domain.nserver' =>	'Nameservers',
-			'domain.status' =>	'Status:',
-			'domain.expires' =>	'Expire Date:',
-			'owner' 	=>	'Registrant',
-			'admin' 	=>	'Admin Contact',
-			'tech' 		=>	'Technical Contacts',
-			'registrar' =>	'Registrar'
-		            );
+{
+  function parse($data_str, $query)
+  {
+    $items = array(
+      'domain.name' => 'Domain:',
+      'domain.nserver' => 'Nameservers',
+      'domain.status' => 'Status:',
+      'domain.created' => 'Created:',
+      'domain.changed' => 'Last Update:',
+      'domain.expires' => 'Expire Date:',
+      'owner' => 'Registrant',
+      'admin' => 'Admin Contact',
+      'tech' => 'Technical Contacts',
+      'registrar' => 'Registrar'
+    );
+    
+    $extra = array(
+      'address:' => 'address.',
+      'contactid:' => 'handle',
+      'organization:' => 'organization',
+      'created:' => 'created',
+      'last update:' => 'changed',
+      'web:' => 'web'
+    );
+    
+    $r['regrinfo'] = easy_parser($data_str['rawdata'], $items, '%Y-%m-%d %H:%M:%S', $extra);
+    
+    if (isset($r['regrinfo']['registrar'])) {
+      $r['regrinfo']['domain']['registrar'] = $r['regrinfo']['registrar'];
+      // unset($r['regrinfo']['registrar']);
+    }
+    
+    $r['regyinfo'] = array(
+      'registrar' => 'IT-Nic',
+      'referrer' => 'http://www.nic.it/'
+    );
+    
+    // Get registered yes/no
+    if (!isset($r['regrinfo']['domain']['status']) || $r['regrinfo']['domain']['status'] != "ok") {
+      $r['regrinfo']['registered'] = 'no';
+    } else {
+      $r['regrinfo']['registered'] = 'yes';
+    }
 
-		$extra = array(
-			'address:' 		=> 'address.',
-			'contactid:'	=> 'handle',
-			'organization:' => 'organization',
-			'created:'		=> 'created',
-			'last update:' 	=> 'changed',
-			'web:'			=> 'web'
-		            );
+    // Parse address
+		if (isset($r["regrinfo"])) {
+			foreach ($r["regrinfo"] as $key => $addressField) {
+				if (!isset($addressField["address"])) {
+					continue;
+				}
 
-		$r['regrinfo'] = easy_parser($data_str['rawdata'], $items, 'ymd',$extra);
-
-		if (isset($r['regrinfo']['registrar']))
-			{
-			$r['regrinfo']['domain']['registrar'] = $r['regrinfo']['registrar'];
-			unset($r['regrinfo']['registrar']);
+				$r["regrinfo"][$key]["address"]["street"] = [$addressField["address"][0]];
+				$r["regrinfo"][$key]["address"]["city"] = $addressField["address"][1];
+				$r["regrinfo"][$key]["address"]["pcode"] = $addressField["address"][2];
+				$r["regrinfo"][$key]["address"]["state"] = $addressField["address"][3];
+				$r["regrinfo"][$key]["address"]["country"] = $addressField["address"][4];
 			}
-
-		$r['regyinfo'] = array(
-                  'registrar' => 'IT-Nic',
-                  'referrer' => 'http://www.nic.it/'
-                  );
-		return $r;
 		}
-	}
+    return $r;
+  }
+}
 ?>

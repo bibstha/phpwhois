@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Berlin');
 $incPath = get_include_path();
 set_include_path(
    get_include_path() . ":" .

@@ -1,0 +1,63 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
+*********************************************************************
+
+Domain:             snip.it
+Status:             ok
+Created:            2003-10-09 00:00:00
+Last Update:        2013-02-12 01:02:47
+Expire Date:        2014-02-12
+
+Registrant
+  Name:             Lorenzo Montagna
+  Organization:     Yahoo Italia Srl
+  ContactID:        MAR135592
+  Address:          via Spadolini 7
+                    Milano
+                    20141
+                    MI
+                    IT
+  Created:          2012-12-12 17:19:40
+  Last Update:      2012-12-12 17:19:40
+
+Admin Contact
+  Name:             Lorenzo Montagna
+  Organization:     Yahoo Italia Srl
+  ContactID:        MAR135592
+  Address:          via Spadolini 7
+                    Milano
+                    20141
+                    MI
+                    IT
+  Created:          2012-12-12 17:19:40
+  Last Update:      2012-12-12 17:19:40
+
+Technical Contacts
+  Name:             Domain Administrator
+  Organization:     Yahoo! Inc.
+  ContactID:        MAR2467
+  Address:          701 First Avenue
+                    Sunnyvale
+                    94089
+                    CA
+                    US
+  Created:          2012-11-06 16:57:15
+  Last Update:      2012-11-06 16:57:15
+
+Registrar
+  Organization:     MarkMonitor International Limited
+  Name:             MARKMONITOR-REG
+  Web:              https://www.markmonitor.com/
+
+Nameservers
+  ns5.yahoo.com
+  ns3.yahoo.com
+  ns1.yahoo.com
+  ns4.yahoo.com
+  ns2.yahoo.com
+

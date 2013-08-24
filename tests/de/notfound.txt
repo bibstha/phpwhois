@@ -1,0 +1,2 @@
+Domain: random1234.de
+Status: free
