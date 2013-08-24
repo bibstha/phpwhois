@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<phpunit colors="false" bootstrap="bootstrap.php">
+	<testsuites>
+		<testsuite name="PHPWhois">
+			<!--<file>rel/path/to/unittest/tests.php</file> -->
+			<Directory>.</Directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
