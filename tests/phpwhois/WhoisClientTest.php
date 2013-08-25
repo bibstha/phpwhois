@@ -6,7 +6,7 @@ class WhoisClientTest extends PHPUnit_Framework_TestCase {
     $whois = new PhpwhoisQuery();
     $query_params = $whois->WhoisQueryParams($domain);
     $result = $whois->FetchRawData($query_params);
-    print_r($result);
+    // print_r($result);
   }
 
   function testWhoisQueryParams() {
