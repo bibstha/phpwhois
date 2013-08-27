@@ -79,7 +79,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
       "date_created" => "2000-02-10 00:00:00",  // format must be "Y-m-d H:i:s"
       "date_updated" => "2013-01-28 00:59:15",  // format must be "Y-m-d H:i:s"
       "date_expires" => "2014-01-12 00:00:00",  // format must be "Y-m-d H:i:s"
-      "date_transferred" => "",  // format must be "Y-m-d H:i:s"
+      // "date_transferred" => "",  // format must be "Y-m-d H:i:s"
       "contacts" => [
           [
           "type" => "registrant",        // types: registrar, registrant, admin, tech, billing

@@ -81,7 +81,7 @@ class PhpwhoisToWhoapi {
     $ret["date_created"] = ($phpwhoFormat["regrinfo"]["domain"]["created"])?: '';;
     $ret["date_updated"] = ($phpwhoFormat["regrinfo"]["domain"]["changed"])?: '';
     $ret["date_expires"] = ($phpwhoFormat["regrinfo"]["domain"]["expires"])?: '';;
-    $ret["date_transferred"] = "";
+    // $ret["date_transferred"] = "";
     $ret["contacts"] = [];
     $ret["nameservers"] = ($phpwhoFormat["regrinfo"]["domain"]["nserver"])?: null;
     $ret["disclaimer"] = ($phpwhoFormat["regrinfo"]["disclaimer"])?: null;

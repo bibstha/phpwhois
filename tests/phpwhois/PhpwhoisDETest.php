@@ -74,7 +74,7 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
       "date_created" => "",  // format must be "Y-m-d H:i:s"
       "date_updated" => "2011-03-30 19:36:27",  // format must be "Y-m-d H:i:s"
       "date_expires" => "",  // format must be "Y-m-d H:i:s"
-      "date_transferred" => "",  // format must be "Y-m-d H:i:s"
+      // "date_transferred" => "",  // format must be "Y-m-d H:i:s"
       "contacts" => [
           [
           "type" => "zone",        // types: registrar, registrant, admin, tech, billing
