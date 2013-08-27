@@ -15,10 +15,11 @@ $raw_whois_parser = function($server, $domain){
 	// whois request - get raw data
 	
 	$data = getPort43Request($server, $domain);
-  print_r($data);
 	
 	/////////////////////////////////// PARSER CODE START
 	
+  // @todo for german whois it does not work just querying the server at
+  // port 43
   // @todo not timezone must be set to parse dates
   require_once('../lib/phpwhois/phpwhois.query.php');
 	require_once('../lib/phpwhois/phpwhois.to.whoapi.php');
@@ -45,7 +46,7 @@ $domain = "postbank.de";
 // make request
 $data = $raw_whois_parser($server, $domain);
 echo "<pre>";
-print_r($data);
+echo json_encode($data);
 
 
 

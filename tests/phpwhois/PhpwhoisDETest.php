@@ -80,7 +80,6 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
           "type" => "zone",        // types: registrar, registrant, admin, tech, billing
           "name" => "Domain Admin",
           "organization" => "MarkMonitor Inc",
-          "full_address" => "",
           "street" => "391 N Ancestor Pl",
           "city" => "Boise",
           "zipcode" => "83704",
@@ -88,13 +87,13 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
           "country" => "US",
           "phone" => "+1.2083895740",
           "fax" => "+1.2083895771",
-          "email" => "ccops@markmonitor.com"
+          "email" => "ccops@markmonitor.com",
+          "full_address" => "MarkMonitor Inc\n391 N Ancestor Pl\nBoise\n83704\nUS"
           ],
           [
           "type" => "tech",        // types: registrar, registrant, admin, tech, billing
           "name" => "DNS Admin",
           "organization" => "Google Inc.",
-          "full_address" => "",
           "street" => "1600 Amphitheatre Parkway",
           "city" => "Mountain View",
           "zipcode" => "94043",
@@ -102,7 +101,8 @@ class PhpwhoisDETest extends PHPUnit_Framework_TestCase {
           "country" => "US",
           "phone" => "+1.6502530000",
           "fax" => "+1.6506188571",
-          "email" => "dns-admin@google.com"
+          "email" => "dns-admin@google.com",
+          "full_address" => "Google Inc.\n1600 Amphitheatre Parkway\nMountain View\n94043\nUS"
           ]
       ],
       "nameservers" => [

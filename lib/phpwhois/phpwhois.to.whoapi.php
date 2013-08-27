@@ -1,9 +1,16 @@
 <?php
 class PhpwhoisToWhoapi {
 
-  function __construct($handlerName, $whoisServer) {
+  /**
+   * @param $handlerName - it, de, ... 
+   *   which relates to respective whois.it.de file
+   * @param $whoisServer - 
+   * @param $handlerFile - 
+   */
+  function __construct($handlerName, $whoisServer, $fileName = null) {
     $this->handlerName = $handlerName;
     $this->whoisServer = $whoisServer;
+    $this->fileName = $fileName;
   }
   
   function convertToWhoapi($str) {
@@ -28,7 +35,12 @@ class PhpwhoisToWhoapi {
 
   function parseStrToPhpwhois($str) {
     $handlerClass = $this->handlerName."_handler";
-    $fileName = sprintf("whois.%s.php", $this->handlerName);
+    if ($this->fileName) {
+      $fileName = $this->fileName;
+    }
+    else {
+      $fileName = sprintf("whois.%s.php", $this->handlerName);  
+    }
     require_once($fileName);
 
     $handler = new $handlerClass();
@@ -99,25 +111,41 @@ class PhpwhoisToWhoapi {
         $contact = [];
         $contact["type"] = $key;
         $contact["name"] = $srcArray["name"];
-        $contact["organization"] = $srcArray["organization"];
-        $contact["full_address"] = ""; //@todo
+        $contact["full_address"] = "";
 
-        if (isset($srcArray["address"]["street"]))
+        if (isset($srcArray["organization"])) {
+          $contact["organization"] = $srcArray["organization"];
+          $contact["full_address"] = $contact["organization"] . "\n";
+        }
+        
+        if (isset($srcArray["address"]["street"])) {
           $contact["street"] = implode(", ", $srcArray["address"]["street"]);
-        if (isset($srcArray["address"]["city"]))
+          $contact["full_address"] .= $contact["street"] . "\n";
+        }
+        if (isset($srcArray["address"]["city"])) {
           $contact["city"] = $srcArray["address"]["city"];
-        if (isset($srcArray["address"]["pcode"]))
+          $contact["full_address"] .= $contact["city"] . "\n";
+        }
+        if (isset($srcArray["address"]["pcode"])) {
           $contact["zipcode"] = $srcArray["address"]["pcode"];
-        if (isset($srcArray["address"]["state"]))
-          $contact["state"] = $srcArray["address"]["state"];;
-        if (isset($srcArray["address"]["country"]))
+          $contact["full_address"] .= $contact["zipcode"] . "\n";
+        }
+        if (isset($srcArray["address"]["state"])) {
+          $contact["state"] = $srcArray["address"]["state"];
+          $contact["full_address"] .= $contact["state"] . "\n";
+        }
+        if (isset($srcArray["address"]["country"])) {
           $contact["country"] = $srcArray["address"]["country"];
+          $contact["full_address"] .= $contact["country"] . "\n";
+        }
         if (isset($srcArray["phone"]))
           $contact["phone"] = $srcArray["phone"];
         if (isset($srcArray["fax"]))
           $contact["fax"] = $srcArray["fax"];
         if (isset($srcArray["email"]))
           $contact["email"] = $srcArray["email"];
+
+        $contact["full_address"] = preg_replace("/\n$/", "", $contact["full_address"]);
       }
       $contacts []= $contact;
     }

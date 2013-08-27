@@ -13,7 +13,7 @@ class PhpwhoisQuery extends Whois
     $result = $this->FetchRawData($query_params);
     return is_array($result)?implode("\n", $result):$result;
   }
-  
+
   /**
    * For given domain name in $query
    * Finds the whois server and the parameters
@@ -195,6 +195,7 @@ class PhpwhoisQuery extends Whois
    */
   function FetchRawData(&$query_params)
   {
+    $query = $query_params['query'];
     // clear error description
     if (isset($query_params['errstr']))
       unset($query_params['errstr']);
@@ -268,7 +269,6 @@ class PhpwhoisQuery extends Whois
         $query_params['server_port'] = $this->PORT;
       
       // Connect to whois server, or return if failed
-      
       $ptr = $this->Connect2($query_params);
       
       if ($ptr < 0) {
@@ -295,7 +295,7 @@ class PhpwhoisQuery extends Whois
         if (stream_select($r, $null, $null, $this->STIMEOUT)) {
           $raw .= fgets($ptr, $this->BUFFER);
         }
-        
+
         if (time() - $start > $this->STIMEOUT) {
           $query_params['status']   = 'error';
           $query_params['errstr'][] = 'Timeout reading from ' . $query_params['server'];
@@ -321,7 +321,7 @@ class PhpwhoisQuery extends Whois
    * Opens up a socket to whois server with given params
    */
   function Connect2(&$query_params)
-  { 
+  {
     if ($server == '')
       $server = $query_params['server'];
     

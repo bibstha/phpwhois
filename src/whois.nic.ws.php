@@ -8,7 +8,7 @@
 
 // put the server you're parsing here
 // also name this file with that name too
-$server = "whois.nic.it";
+$server = "whois.nic.ws";
 
 $raw_whois_parser = function($server, $domain){
 	
@@ -18,9 +18,16 @@ $raw_whois_parser = function($server, $domain){
 	
 	/////////////////////////////////// PARSER CODE START
 	
+  // @todo for german whois it does not work just querying the server at
+  // port 43
   // @todo not timezone must be set to parse dates
-	require_once('../lib/phpwhois/phpwhois2whoapi.php');
-  $whois = new PhpwhoisToWhoapi("it", $server);
+  require_once('../lib/phpwhois/phpwhois.query.php');
+	require_once('../lib/phpwhois/phpwhois.to.whoapi.php');
+
+  $queryObj = new PhpwhoisQuery();
+  $data = $queryObj->fetch($domain);
+
+  $whois = new PhpwhoisToWhoapi("ws", $server);
   $data = $whois->convertToWhoapi($data);
 
 	/////////////////////////////////// PARSER CODE END
@@ -35,12 +42,11 @@ $raw_whois_parser = function($server, $domain){
 // comment these commands when done with scripting
 //////////////////////////////////////////////////
 // domain to parse, put any for debugging
-$domain = "unicredit.it";
+$domain = "website.ws";
 // make request
 $data = $raw_whois_parser($server, $domain);
-// echo result
 echo "<pre>";
-echo json_encode($data);
+print_r($data);
 
 
 

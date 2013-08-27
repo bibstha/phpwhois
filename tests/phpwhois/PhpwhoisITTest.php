@@ -85,7 +85,12 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
           "type" => "registrant",        // types: registrar, registrant, admin, tech, billing
           "name" => "Amazon Europe Holding Technologies SCS",
           "organization" => "Amazon Europe Holding Technologies SCS",
-          "full_address" => "",
+          "full_address" => "Amazon Europe Holding Technologies SCS
+65, boulevard Grande-Duchesse Charlotte
+Luxembourg City
+1311
+LU
+LU",
           "street" => "65, boulevard Grande-Duchesse Charlotte",
           "city" => "Luxembourg City",
           "zipcode" => "1311",
@@ -96,7 +101,12 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
           "type" => "admin",        // types: registrar, registrant, admin, tech, billing
           "name" => "Jocelyn Krabbenschmidt",
           "organization" => "Amazon Europe Holding Technologies SCS",
-          "full_address" => "",
+          "full_address" => "Amazon Europe Holding Technologies SCS
+65, boulevard Grande-Duchesse Charlotte
+Luxembourg City
+1311
+LU
+LU",
           "street" => "65, boulevard Grande-Duchesse Charlotte",
           "city" => "Luxembourg City",
           "zipcode" => "1311",
@@ -107,7 +117,12 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
           "type" => "tech",        // types: registrar, registrant, admin, tech, billing
           "name" => "Amazon Hostmaster",
           "organization" => "Amazon.com, Inc.",
-          "full_address" => "",
+          "full_address" => "Amazon.com, Inc.
+PO BOX 81226
+Seattle
+98108-1300
+WA
+US",
           "street" => "PO BOX 81226",
           "city" => "Seattle",
           "zipcode" => "98108-1300",
@@ -118,7 +133,7 @@ class PhpwhoisITTest extends PHPUnit_Framework_TestCase {
           "type" => "registrar",        // types: registrar, registrant, admin, tech, billing
           "name" => "ANCHOVY-REG",
           "organization" => "Hogan Lovells (Paris) LLP",
-          "full_address" => "",
+          "full_address" => "Hogan Lovells (Paris) LLP",
           // "street" => "PO BOX 81226",
           // "city" => "Seattle",
           // "zipcode" => "98108-1300",
